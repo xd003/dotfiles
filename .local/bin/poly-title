@@ -1,0 +1,7 @@
+stitle="$(xprop -id $(xdotool getwindowfocus) | grep WM_CLASS | perl -pe 's/.*=\s"(.*?)".*/$1/g')"
+if [ -n "$stitle" ]
+then
+  echo "$stitle"
+else
+  echo "Desktop"
+fi

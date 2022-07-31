@@ -77,7 +77,7 @@ ctrl + shift + Print
 super + shift + {q,r}
   bspc {quit,wm -r}
 
-# Close and kill
+# Close Focused Window
 alt + Down
   bspc node -c
 

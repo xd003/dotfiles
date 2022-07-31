@@ -43,7 +43,7 @@ super + {w,backslash}
 
 # Randomize wallpaper
 super + shift + w
-  {feh --no-fehbg --bg-fill --randomize "$HOME/Pictures/Wallpapers/"}
+  {nitrogen --set-zoom-fill --save --random Pictures/Wallpapers}
 
 # Volume controls
 XF86Audio{RaiseVolume,LowerVolume,Mute}

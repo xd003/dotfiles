@@ -79,7 +79,7 @@ super + shift + {q,r}
 
 # Close and kill
 alt + Down
-  bspc node -c && bspc {node,desktop} -f last
+  bspc node -c
 
 # Alternate between the tiled and monocle layout
 super + space

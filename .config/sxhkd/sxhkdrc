@@ -15,7 +15,7 @@ super + Escape
 
 # Right click menu
 ~button3
-  xqp 0 $(xdo id -N Bspwm -n root) && jgmenu_run 
+  xqp 0 $(xdo id -N Bspwm -n root) && jgmenu_run
 
 # Cheatsheet, terminal
 super + {k,Return}
@@ -55,7 +55,7 @@ XF86MonBrightness{Up,Down}
 
 # Flameshot screenshot launcher
 Print
-  flameshot gui
+  flameshot full -c -p /home/xd003/Pictures/Screenshots
 
 #
 # Screenshot exras
@@ -78,8 +78,8 @@ super + shift + {q,r}
   bspc {quit,wm -r}
 
 # Close and kill
-super + {q,Delete}
-  {bspc node -c,bspc node -c}
+alt + Down
+  bspc node -{c,k} && bspc {node,desktop} -f last
 
 # Alternate between the tiled and monocle layout
 super + space
@@ -138,16 +138,16 @@ super + {p,b,comma,period}
 	bspc node -f @{parent,brother,first,second}
 
 # Focus the next/previous window in the current desktop
-super + {_,shift + }c
-	bspc node -f {next,prev}.local.!hidden.window
+alt + space
+ bspc node -f {next,prev}.local.!hidden.window
         
 # Rotate windows
 super + {r,KP_Divide}        
   bspc node @/ -R {90,90}
 
-# Focus the next/previous desktop in the current monitor
-super + bracket{left,right}
-	bspc desktop -f {prev,next}.local
+# Focus the next/previous active desktop in the current monitor
+alt + {Left,Right}
+ bspc desktop -f {prev,next}.occupied.local
 
 # Focus the last node/desktop
 super + {grave,Tab}

@@ -3,5 +3,5 @@ if [ -n "$stitle" ]
 then
   echo "$stitle"
 else
-  echo "Desktop"
+  echo ""
 fi

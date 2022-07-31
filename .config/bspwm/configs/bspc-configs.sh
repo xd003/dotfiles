@@ -10,7 +10,7 @@ workspaces() {
 workspaces
 
 bspc config border_width 2
-bspc config window_gap 1
+bspc config window_gap 0
 bspc config split_ratio 0.50
 
 bspc config focused_border_color "#7bc5e4"

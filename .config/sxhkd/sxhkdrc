@@ -106,8 +106,8 @@ super + ctrl + {KP_Delete}
 	bspc node -t {pseudo_tiled}
 
 # Set full screen
-super + {f,KP_Enter}
-  bspc node -t {fullscreen,fullscreen}
+super + f
+    bspc node -t "~"fullscreen
 
 # Set the node flags
 super + ctrl + {m,x,z}

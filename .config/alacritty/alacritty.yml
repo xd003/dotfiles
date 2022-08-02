@@ -1,4 +1,4 @@
-schemes:
+nschemes:
   # Tokyo Night theme, based on both:
   #   https://github.com/ghifarit53/tokyonight-vim
   #   https://github.com/enkia/tokyo-night-vscode-theme
@@ -83,3 +83,9 @@ window:
   padding:
     x: 8
     y: 8
+    
+selection:
+  save_to_clipboard: true
+  
+mouse_bindings:
+  - { mouse: Right, action: Paste }

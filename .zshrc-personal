@@ -7,6 +7,7 @@ alias cpu="ps axch -o cmd:15,%cpu --sort=-%cpu | head"
 alias df="duf"
 alias e='exit'
 alias c="clear"
+alias xev="xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'"
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias g='gotop'

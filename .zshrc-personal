@@ -1,11 +1,13 @@
 #aliases
 alias cat='bat'
 alias cd..='cd ..'
-alias cleanup='sudo pacman -Rns $(pacman -Qtdq);yay -c' #Cleanup orphaned packages
+alias cleanup='sudo pacman -Rns $(pacman -Qtdq);paru -Scc' #Cleanup orphaned packages
 alias clock='tty-clock -sct -C 4'
 alias cpu="ps axch -o cmd:15,%cpu --sort=-%cpu | head"
 alias df='df -h'
+alias du="duf"
 alias e='exit'
+alias c="clear"
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias g='gotop'

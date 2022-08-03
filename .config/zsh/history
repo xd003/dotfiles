@@ -1,0 +1,15 @@
+lmao
+clear
+cd .cache
+ls
+cd zsh
+clear
+ls
+cat *
+cat *
+bat *
+cd
+clear
+cd dotfiles
+git pull origin bspwm
+cd

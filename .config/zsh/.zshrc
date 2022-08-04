@@ -12,14 +12,6 @@ fi
 # /___/____/_/ /_/ 
 #                  
 
-if [ -d "$HOME/.bin" ] ;
-  then PATH="$HOME/.bin:$PATH"
-fi
-
-if [ -d "$HOME/.local/bin" ] ;
-  then PATH="$HOME/.local/bin:$PATH"
-fi
-
 fpath=(~/.zsh $fpath)
 
 # History defaults
@@ -70,8 +62,9 @@ zinit light-mode for \
 
 ### End of Zinit's installer chunk
 
-autoload compinit
+autoload -Uz compinit
 compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"
+_comp_options+=(globdots) # lets you tab complete hidden files by default
 
 # Load plugins
 zinit for \

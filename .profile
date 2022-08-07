@@ -1,6 +1,6 @@
 # zsh profile file. Runs on login. Environmental variables are set here
-# export QT_QPA_PLATFORMTHEME="qt5ct" # Have QT use qt5ct theme
-export QT_STYLE_OVERRIDE=kvantum
+export QT_QPA_PLATFORMTHEME="qt5ct" # Have QT use qt5ct theme
+# export QT_STYLE_OVERRIDE=kvantum
 
 # set PATH so it includes user's private ~/.local/bin if it exists
 if [ -d "$HOME/.local/bin" ]; then

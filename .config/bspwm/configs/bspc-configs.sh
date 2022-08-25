@@ -18,8 +18,8 @@ workspaces() {
 }
 workspaces
 
-bspc config border_width 3
-bspc config window_gap 10
+bspc config border_width 2
+bspc config window_gap 0
 bspc config split_ratio 0.50
 
 # Colors

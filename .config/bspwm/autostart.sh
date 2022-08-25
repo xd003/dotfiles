@@ -9,20 +9,12 @@
 
 # Restart default apps
 declare -a restart=(xfce4-power-manager picom sxhkd xbanish
-	copyq playerctld plank flameshot touchegg dunst 1password)
+	copyq playerctld flameshot touchegg dunst 1password)
 for i in "${restart[@]}"; do
 	pgrep -x "$i" | xargs kill
   sleep 0.5
 	eval "$i" &
 done
-
-# Exclusive apps
-if [[ ! $(pidof stalonetray) ]]; then
-	stalonetray &
-  sleep 0.5
-	xdo hide -N stalonetray
-	touch "/tmp/syshide.lock"
-fi
 
 pgrep -x "eww" | xargs kill;
 control_box -ewwopen

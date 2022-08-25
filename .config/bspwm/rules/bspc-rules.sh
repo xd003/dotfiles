@@ -11,8 +11,8 @@
 # Workspace specific conditions
 #
 
-# workspace 1 (Chat)
-declare -a terminal=(discord Brave-browser)
+# workspace 1 (Terminals)
+declare -a terminal=(Alacritty)
 for i in "${terminal[@]}"; do
 	bspc rule -a "$i" desktop='^1' follow=on focus=on
 done
@@ -24,20 +24,20 @@ for i in "${web[@]}"; do
 done
 
 # workspace 3 (File Managers)
-declare -a filem=(Pcmanfm qBittorrent)
+declare -a filem=(thunar)
 for i in "${filem[@]}"; do
 	bspc rule -a "$i" desktop='^3' follow=on focus=on
 done
 
 # workspace 4 (Text Editor)
-declare -a work=(Blender "*:soffice")
+declare -a work=(neovim)
 for i in "${work[@]}"; do
 	bspc rule -a "$i" desktop='^4' follow=on focus=on
 done
 
 # workspace 5 (Media)
 declare -a media=(vlc obs instagram-live-streamer mplayer
-	lxmusic Gimp Gimp-2.10 "VirtualBox Manager")
+	lxmusic Gimp Gimp-2.10 celluloid "VirtualBox Manager")
 for i in "${media[@]}"; do
 	bspc rule -a "$i" desktop='^5' follow=on focus=on
 done

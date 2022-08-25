@@ -19,6 +19,15 @@ return {
 
 	["baskerville/vim-sxhkdrc"] = {},
 
+	["elkowar/yuck.vim"] = {},
+
+	["Fymyte/rasi.vim"] = {
+		ft = { "rasi" },
+		run = ":TSInstall rasi",
+	},
+
+	["gpanders/nvim-parinfer"] = {},
+
 	-- formatting and diagnostic
 	["jose-elias-alvarez/null-ls.nvim"] = {
 		after = "nvim-lspconfig",
@@ -33,5 +42,27 @@ return {
 		run = function()
 			vim.fn["mkdp#util#install"]()
 		end,
+	},
+
+	["williamboman/mason-lspconfig.nvim"] = {
+		after = "mason.nvim",
+		config = function()
+			require("custom.plugins.mason-lspconfig").setup()
+		end,
+	},
+
+	["williamboman/mason.nvim"] = {
+		event = "VimEnter",
+	},
+
+	["neovim/nvim-lspconfig"] = {
+		config = function()
+			require("plugins.configs.lspconfig")
+			require("lspconfig").bashls.setup({})
+		end,
+	},
+
+	["folke/which-key.nvim"] = {
+		disable = false,
 	},
 }

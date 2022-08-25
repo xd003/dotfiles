@@ -16,6 +16,9 @@ local b = null_ls.builtins
 
 local sources = {
 	b.formatting.shfmt,
+	b.formatting.beautysh.with({
+    filetypes = { "zsh" },
+  }),
 	b.formatting.stylua,
 	b.formatting.prettier,
 	b.formatting.shellharden,
@@ -23,10 +26,12 @@ local sources = {
 	b.diagnostics.markdownlint.with({
 		extra_args = { "--disable MD002 MD006" },
 	}),
-	b.diagnostics.shellcheck,
+	-- b.diagnostics.shellcheck,
+	b.diagnostics.zsh,
 	b.diagnostics.flake8,
 	b.diagnostics.mypy,
-	b.code_actions.shellcheck,
+	b.diagnostics.stylint,
+	-- b.code_actions.shellcheck,
 }
 
 local M = {}
@@ -45,7 +50,7 @@ M.setup = function()
 					vim.schedule_wrap(function()
 						vim.lsp.buf.formatting_sync()
 					end),
-					{ desc = "   lsp formatting" }
+					{ desc = "lsp formatting" }
 				)
 			end
 		end,

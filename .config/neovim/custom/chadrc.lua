@@ -9,8 +9,8 @@ M.ui = {
 M.plugins = {
 
 	override = {
-		["nvim-treesitter/nvim-treesitter"] = override.treesitter,
-    ["williamboman/mason.nvim"] = override.mason,
+		["williamboman/mason.nvim"] = override.mason,
+    ["williamboman/mason-lspconfig.nvim"] = override.mason_lspconfig,
 	},
 
 	user = require("custom.plugins"),

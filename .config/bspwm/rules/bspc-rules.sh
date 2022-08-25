@@ -1,11 +1,18 @@
 #!/bin/bash
 
+#                __         
+#    _______  __/ /__  _____
+#   / ___/ / / / / _ \/ ___/
+#  / /  / /_/ / /  __(__  ) 
+# /_/   \__,_/_/\___/____/  
+#                           
+
 #
 # Workspace specific conditions
 #
 
-# workspace 1 (Terminals)
-declare -a terminal=(Alacritty)
+# workspace 1 (Chat)
+declare -a terminal=(discord Brave-browser)
 for i in "${terminal[@]}"; do
 	bspc rule -a "$i" desktop='^1' follow=on focus=on
 done
@@ -16,21 +23,21 @@ for i in "${web[@]}"; do
 	bspc rule -a "$i" desktop='^2' follow=on focus=on
 done
 
-# workspace 3 (Files)
-declare -a filem=(Pcmanfm qBittorrent Thunar)
+# workspace 3 (File Managers)
+declare -a filem=(Pcmanfm qBittorrent)
 for i in "${filem[@]}"; do
 	bspc rule -a "$i" desktop='^3' follow=on focus=on
 done
 
 # workspace 4 (Text Editor)
-declare -a work=(Blender Geany Gedit)
+declare -a work=(Blender "*:soffice")
 for i in "${work[@]}"; do
 	bspc rule -a "$i" desktop='^4' follow=on focus=on
 done
 
 # workspace 5 (Media)
-declare -a media=(vlc obs Celluloid instagram-live-streamer mplayer lxmusic Gimp
-	Gimp-2.10 "VirtualBox Manager")
+declare -a media=(vlc obs instagram-live-streamer mplayer
+	lxmusic Gimp Gimp-2.10 "VirtualBox Manager")
 for i in "${media[@]}"; do
 	bspc rule -a "$i" desktop='^5' follow=on focus=on
 done
@@ -43,30 +50,27 @@ for i in "${settings[@]}"; do
 	bspc rule -a "$i" desktop='^7' follow=on focus=on
 done
 
-# floating windows
+#                         ___ __  _                   __
+#   _________  ____  ____/ (_) /_(_)___  ____  ____ _/ /
+#  / ___/ __ \/ __ \/ __  / / __/ / __ \/ __ \/ __ `/ / 
+# / /__/ /_/ / / / / /_/ / / /_/ / /_/ / / / / /_/ / /  
+# \___/\____/_/ /_/\__,_/_/\__/_/\____/_/ /_/\__,_/_/   
+# Conditional                                                     
+
+# Force floating mode
 declare -a floats=(Alafloat Lxappearance Arandr
-	Viewnior feh Nm-connection-editor Matplotlib
-	Yad Gnome-disks SimpleScreenRecorder
-	Font-manager Gnome-system-monitor PureRef Gcolor3 flameshot Xarchiver Blueberry.py
-	Pavucontrol jamesdsp Nvidia-settings Nitrogen
-	Peazip Xfce4-appearance-settings Xfce4-mouse-settings
-	qView parsecd Galculator com.github.joseexposito.touche
+	Viewnior Nm-connection-editor Matplotlib
+	Yad Gnome-disks SimpleScreenRecorder PureRef
+	Font-manager Gnome-system-monitor Thunar
+	Gcolor3 flameshot Blueberry.py Pavucontrol
+	jamesdsp Nvidia-settings Nitrogen Peazip
+	Xfce4-appearance-settings Xfce4-mouse-settings
+	parsecd Galculator com.github.joseexposito.touche
 	XVkbd usbguard-applet-qt instagram-live-streamer
-  Mumble)
+	Mumble qimgv Peek)
 for i in "${floats[@]}"; do
 	bspc rule -a "$i" manage=on state=floating follow=on focus=on center=true
 done
-
-#
-# Exclusive apps
-#
-
-# Keep plank above all windows
-bspc rule -a Plank manage=off locked=on border=off state=floating focus=off
-
-#
-# Exclusive conditions
-#
 
 # Force tile windows
 declare -a tiled=(Zathura)
@@ -79,3 +83,13 @@ declare -a fullscreen=(mpv)
 for i in "${fullscreen[@]}"; do
 	bspc rule -a "$i" manage=on state=fullscreen
 done
+
+#                   __           _          
+#   ___  _  _______/ /_  _______(_)   _____ 
+#  / _ \| |/_/ ___/ / / / / ___/ / | / / _ \
+# /  __/>  </ /__/ / /_/ (__  ) /| |/ /  __/
+# \___/_/|_|\___/_/\__,_/____/_/ |___/\___/ 
+# Exclusive                                      
+
+# Keep plank above all windows
+bspc rule -a Plank manage=off locked=on border=off state=floating focus=off

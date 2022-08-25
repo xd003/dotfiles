@@ -1,1 +1,28 @@
 #!/usr/bin/env bash
+
+# Deleting already existing configs to avoid conflicts
+rm -rf $HOME/.config/Kvantum
+rm -rf $HOME/.config/alacritty
+rm -rf $HOME/.config/bspwm
+rm -rf $HOME/.config/dunst
+rm -rf $HOME/.config/jgmenu
+rm -rf $HOME/.config/mpv
+rm -rf $HOME/.config/neofetch
+rm -rf $HOME/.config/neovim
+rm -rf $HOME/.config/networkmanager-dmenu
+rm -rf $HOME/.config/pipewire
+rm -rf $HOME/.config/ranger
+rm -rf $HOME/.config/rofi
+rm -rf $HOME/.config/sxkhd
+rm -rf $HOME/.config/touchegg
+rm -rf $HOME/.config/zathura
+rm -rf $HOME/.config/zsh
+rm -rf $HOME/.config/
+rm -rf $HOME/.config/
+rm -rf $HOME/.config/
+rm -rf $HOME/.config/
+rm -rf $HOME/.config/
+rm -rf $HOME/.config/
+rm -rf $HOME/.config/
+rm -rf $HOME/.config/
+rm -rf $HOME/.config/

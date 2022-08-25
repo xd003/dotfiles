@@ -17,12 +17,3 @@ rm -rf $HOME/.config/sxkhd
 rm -rf $HOME/.config/touchegg
 rm -rf $HOME/.config/zathura
 rm -rf $HOME/.config/zsh
-rm -rf $HOME/.config/
-rm -rf $HOME/.config/
-rm -rf $HOME/.config/
-rm -rf $HOME/.config/
-rm -rf $HOME/.config/
-rm -rf $HOME/.config/
-rm -rf $HOME/.config/
-rm -rf $HOME/.config/
-rm -rf $HOME/.config/

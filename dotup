@@ -12,16 +12,11 @@ fi
 
 #Cleaning Home
 (cd $HOME/dotfiles/config/zsh ; find . -exec rm -rf $HOME/{} \;)
-
+(cd $HOME/dotfiles ; find . type -f -exec rm -rf $HOME/{} \;)
   
-$HOME/.profile 
-$HOME/.bashrc 
-$HOME/.bash_profile
+
 $HOME/Scripts
 $HOME/.bin
-
-
-
 
 #Cleaning scripts & other misc stuffs
 (cd $HOME/dotfiles/.local/bin ; find . -exec rm -rf $HOME/.config/.local/bin/{} \;)

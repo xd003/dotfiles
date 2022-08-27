@@ -24,7 +24,7 @@ for i in "${web[@]}"; do
 done
 
 # workspace 3 (File Managers)
-declare -a filem=(thunar)
+declare -a filem=(Thunar)
 for i in "${filem[@]}"; do
 	bspc rule -a "$i" desktop='^3' follow=on focus=on
 done

@@ -2,7 +2,7 @@
 
 #Cloning | Updating dotfiles repo locally
 if [ -d "$HOME/dotfiles" ]; then
-  (cd $HOME/dotfiles ; git add -A && git commit -m "local updates" && git push origin bspwm && git pull origin bspwm)
+  (cd $HOME/dotfiles ; git add -A && git commit -m "local updates" && git push origin bspwm ; git pull origin bspwm)
 else
   (cd $HOME ; git clone https://github.com/xd003/dotfiles)
 fi

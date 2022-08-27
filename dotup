@@ -11,9 +11,9 @@ fi
 (cd $HOME/dotfiles/config ; find . -exec rm -rf $HOME/.config/{} \;)
 
 #Cleaning Home
-rm -rf $HOME/.zshrc 
-$HOME/history 
-$HOME/.p10k.zsh 
+(cd $HOME/dotfiles/config/zsh ; find . -exec rm -rf $HOME/{} \;)
+
+  
 $HOME/.profile 
 $HOME/.bashrc 
 $HOME/.bash_profile

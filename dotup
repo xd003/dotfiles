@@ -18,4 +18,12 @@ rm -rf $HOME/.config/touchegg
 rm -rf $HOME/.config/zathura
 rm -rf $HOME/.config/zsh
 
-rm -rf $HOME/.zshrc $HOME/history $HOME/.p10k.zsh $HOME/.profile $HOME/.bashrc $HOME/.bash_profile
+#Cleaning Home
+rm -rf $HOME/.zshrc 
+$HOME/history 
+$HOME/.p10k.zsh 
+$HOME/.profile 
+$HOME/.bashrc 
+$HOME/.bash_profile
+$HOME/Scripts
+$HOME/.bin

@@ -18,3 +18,6 @@ rm -rf $HOME/Scripts $HOME/.bin
 #Cleaning scripts & other misc stuffs
 (cd $HOME/dotfiles/.local/bin ; find . -maxdepth 1 -mindepth 1 -exec rm -rf $HOME/.config/.local/bin/{} \;)
 (cd $HOME/dotfiles/.local/share/fonts ; find . -maxdepth 1 -mindepth 1 -exec rm -rf $HOME/local/share/fonts/{} \;)
+
+#Creating Symlinks
+ln -sf $HOME/dotfiles/.config/* $HOME/.config/

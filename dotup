@@ -27,3 +27,4 @@ $HOME/.bashrc
 $HOME/.bash_profile
 $HOME/Scripts
 $HOME/.bin
+cd $HOME/dotfiles/.local/bin ; find . -exec rm -rf $HOME/.config/.local/bin/{} \;

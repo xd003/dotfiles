@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+#Cloning | Updating dotfiles repo locally
+if [ -d "$HOME/dotfiles" ]; then
+  
+
 # Deleting already existing configs to avoid conflicts
 rm -rf $HOME/.config/Kvantum
 rm -rf $HOME/.config/alacritty
@@ -28,7 +32,7 @@ $HOME/.bash_profile
 $HOME/Scripts
 $HOME/.bin
 
-#Cloning | Updating dotfiles repo locally
+
 
 
 #Cleaning scripts & other misc stuffs

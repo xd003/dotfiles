@@ -8,7 +8,7 @@ else
 fi
 
 # Deleting already existing configs to avoid conflicts
-(cd $HOME/dotfiles/.config ; find . -exec rm -rf $HOME/.config/{} \;)
+(cd $HOME/dotfiles/.config ; find . -maxdepth 1 -type d -exec rm -rf $HOME/.config/{} \;)
 
 #Cleaning Home
 (cd $HOME/dotfiles/.config/zsh ; find . -exec rm -rf $HOME/{} \;)

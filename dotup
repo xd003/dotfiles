@@ -12,7 +12,7 @@ fi
 
 #Cleaning Home
 (cd $HOME/dotfiles/config/zsh ; find . -exec rm -rf $HOME/{} \;)
-(cd $HOME/dotfiles ; find . type -f -exec rm -rf $HOME/{} \;)
+(cd $HOME/dotfiles ; find . -type f -exec rm -rf $HOME/{} \;)
   
 
 $HOME/Scripts

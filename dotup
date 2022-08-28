@@ -11,7 +11,7 @@ fi
 (cd $HOME/dotfiles/.config ; find . -maxdepth 1 -mindepth 1 -type d -exec rm -rf $HOME/.config/{} \;)
 
 #Cleaning Home Directory
-(cd $HOME ; rm -rf .p10k.zsh .zshrc zshrc-personal history .zcompdump 
+(cd $HOME ; rm -rf .p10k.zsh .zshrc zshrc-personal history .zcompdump .lesshst .bashrc .bash_profile .bash_history .bash_logout .profile .zprofile
 rm -rf $HOME/Scripts $HOME/.bin
 
 #Cleaning scripts & other misc stuffs

@@ -27,5 +27,5 @@ mkdir -p $HOME/Scripts && ln -sf $HOME/dotfiles/Scripts/* $HOME/Scripts/
 find $HOME/dotfiles -maxdepth 1 -mindepth 1 -type f -exec ln -sf {} $HOME/ \;
 
 #Giving necessary permission to executables
-sudo chmod u+x $HOME/.bin/* $HOME/.local/bin/* 
+sudo chmod u+x $HOME/.bin/* $HOME/.local/bin/* $HOME/Scripts/*
 find $HOME/dotfiles/.config -type f -name "*rc" -exec sudo chmod u+x {} \;

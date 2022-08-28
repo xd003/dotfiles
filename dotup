@@ -24,6 +24,7 @@ mkdir -p $HOME/.bin && ln -sf $HOME/dotfiles/.bin/* $HOME/.bin/
 mkdir -p $HOME/.local/bin && ln -sf $HOME/dotfiles/.local/bin/* $HOME/.local/bin/
 mkdir -p $HOME/Scripts && ln -sf $HOME/dotfiles/Scripts/* $HOME/Scripts/
 find $HOME/dotfiles -maxdepth 1 -mindepth 1 -type f ! -name '.gitignore' ! -name 'dotup' -exec ln -sf {} $HOME/ \;
+ln -sf $HOME/dotfiles/dotup $HOME/.bin/dotup
 
 #Giving necessary permission to executables
 sudo chmod u+x $HOME/.bin/* $HOME/.local/bin/* $HOME/Scripts/*

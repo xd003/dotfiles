@@ -10,9 +10,8 @@ fi
 # Deleting already existing configs to avoid conflicts
 (cd $HOME/dotfiles/.config ; find . -maxdepth 1 -mindepth 1 -type d -exec rm -rf $HOME/.config/{} \;)
 
-#Cleaning Home
-(cd $HOME/dotfiles/.config/zsh ; find . -maxdepth 1 -mindepth 1 -exec rm -rf $HOME/{} \;)
-(cd $HOME/dotfiles ; find . -maxdepth 1 -mindepth 1 -type f ! -name '.gitconfig' -exec rm -rf $HOME/{} \;)
+#Cleaning Home Directory
+(cd $HOME ; rm -rf .p10k.zsh .zshrc zshrc-personal history .zcompdump 
 rm -rf $HOME/Scripts $HOME/.bin
 
 #Cleaning scripts & other misc stuffs

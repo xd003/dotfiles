@@ -11,7 +11,7 @@
 # Override QT apps theme
 export QT_STYLE_OVERRIDE=kvantum
 export QT_AUTO_SCREEN_SCALE_FACTOR=1
-export QT_FONT_DPI=116 Roboto
+export QT_FONT_DPI=116 Noto Sans
 
 export XCURSOR_SIZE=32
 
@@ -50,9 +50,6 @@ export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 export SCREENRC="$XDG_CONFIG_HOME"/screen/screenrc
 export MYPY_CACHE_DIR="$XDG_CACHE_HOME"/mypy
 export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
-
-# Temporary additions
-export PATH=$PATH:~/.spoof-dpi/bin
 
 # Set default mime types
 export TERMINAL="alacritty"

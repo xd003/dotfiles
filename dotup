@@ -1,16 +1,8 @@
 #!/usr/bin/env bash
 
-#gitconfig
-if [ ! -f "$HOME/.gitconfig" ]; then
-  read -e -p "Input your github username : " GITUSER
-  read -e -p "Input your github email : " GITEMAIL
-  git config --global user.name $GITUSER
-  git config --global user.email $GITEMAIL
-fi
-
 #Cloning | Updating dotfiles repo locally
 if [ -d "$HOME/dotfiles" ]; then
-  (cd $HOME/dotfiles ; git add -A && git commit -m "local updates" && git push origin bspwm ; git pull origin bspwm)
+  (cd $HOME/dotfiles ; git reset --hard && git clean -f -d && git pull origin bspwm)
 else
   (cd $HOME ; git clone https://github.com/xd003/dotfiles)
 fi

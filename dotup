@@ -18,6 +18,9 @@ fi
 (cd $HOME/dotfiles/.local/bin ; find . -maxdepth 1 -mindepth 1 -exec rm -rf $HOME/.local/bin/{} \;)
 (cd $HOME/dotfiles/.local/share/fonts ; find . -maxdepth 1 -mindepth 1 -exec rm -rf $HOME/local/share/fonts/{} \;)
 
+#Clearing up broken symlinks
+(cd $HOME ; find . -xtype l -delete)
+
 #Creating Symlinks
 mkdir -p $HOME/.config && ln -sf $HOME/dotfiles/.config/* $HOME/.config/
 mkdir -p $HOME/.bin && ln -sf $HOME/dotfiles/.bin/* $HOME/.bin/

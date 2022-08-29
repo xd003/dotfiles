@@ -23,7 +23,7 @@ mkdir -p $HOME/.bin && ln -sf $HOME/dotfiles/.bin/* $HOME/.bin/
 mkdir -p $HOME/.local/bin && ln -sf $HOME/dotfiles/.local/bin/* $HOME/.local/bin/
 mkdir -p $HOME/Scripts && ln -sf $HOME/dotfiles/Scripts/* $HOME/Scripts/
 mkdir -p $HOME/.local/share/fonts && ln -sf $HOME/dotfiles/.local/share/fonts/* $HOME/.local/share/fonts/
-mkdir -p $HOME/Pictures && ln -sf $HOME/dotfiles/Pictures/* $HOME/Pictures/
+mkdir -p $HOME/Pictures/Wallpapers && ln -sf $HOME/dotfiles/Pictures/Wallpapers/* $HOME/Pictures/Wallapapers/
 find $HOME/dotfiles -maxdepth 1 -mindepth 1 -type f ! -name '.gitignore' ! -name 'dotup' -exec ln -sf {} $HOME/ \;
 ln -sf $HOME/dotfiles/dotup $HOME/.bin/dotup
 

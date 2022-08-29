@@ -61,9 +61,8 @@ done
 declare -a floats=(Alafloat Lxappearance Arandr
 	Viewnior Nm-connection-editor Matplotlib
 	Yad Gnome-disks SimpleScreenRecorder PureRef
-	Font-manager Gnome-system-monitor Thunar
-	Gcolor3 flameshot Blueberry.py Pavucontrol
-	jamesdsp Nvidia-settings Nitrogen Peazip
+	Font-manager Gnome-system-monitor Gcolor3 flameshot Blueberry.py
+	Pavucontrol jamesdsp Nvidia-settings Nitrogen Peazip
 	Xfce4-appearance-settings Xfce4-mouse-settings
 	parsecd Galculator com.github.joseexposito.touche
 	XVkbd usbguard-applet-qt instagram-live-streamer
@@ -79,7 +78,7 @@ for i in "${tiled[@]}"; do
 done
 
 # Force full screen windows
-declare -a fullscreen=(mpv Thunar)
+declare -a fullscreen=(mpv)
 for i in "${fullscreen[@]}"; do
 	bspc rule -a "$i" manage=on state=fullscreen
 done

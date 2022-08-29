@@ -79,7 +79,7 @@ for i in "${tiled[@]}"; do
 done
 
 # Force full screen windows
-declare -a fullscreen=(mpv)
+declare -a fullscreen=(mpv Thunar)
 for i in "${fullscreen[@]}"; do
 	bspc rule -a "$i" manage=on state=fullscreen
 done

@@ -30,6 +30,6 @@ ln -sf $HOME/dotfiles/dotup $HOME/.bin/dotup
 #Giving necessary permission to executables
 sudo chmod u+x $HOME/.bin/* $HOME/.local/bin/* $HOME/Scripts/*
 find $HOME/dotfiles/.config -type f -name "*rc" -exec sudo chmod u+x {} \;
-(cd $HOME/dotfiles ; git config core.fileMode false)
+(cd $HOME/dotfiles ; git config core.filemode false)
 
 echo && echo "Dotfiles successfully restored"

@@ -27,7 +27,7 @@ mkdir -p $HOME/Pictures && ln -sf $HOME/dotfiles/Pictures/* $HOME/Pictures/
 find $HOME/dotfiles -maxdepth 1 -mindepth 1 -type f ! -name '.gitignore' ! -name 'dotup' -exec ln -sf {} $HOME/ \;
 ln -sf $HOME/dotfiles/dotup $HOME/.bin/dotup
 
-#Giving necessary permission to executables
+#Giving necessary permission to executables & ignoring chmod changes in repo
 sudo chmod u+x $HOME/.bin/* $HOME/.local/bin/* $HOME/Scripts/*
 find $HOME/dotfiles/.config -type f -name "*rc" -exec sudo chmod u+x {} \;
 (cd $HOME/dotfiles ; git config core.filemode false)

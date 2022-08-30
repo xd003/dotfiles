@@ -6,7 +6,7 @@
 #                              
 
 [global]
-font = Roboto Medium 12
+font = Noto Sans Medium 12
 icon_theme = "Papirus-Dark"
 enable_recursive_icon_lookup = true
 

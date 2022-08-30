@@ -33,7 +33,7 @@
     :bat_low ""
     :bat_normal ""
     :bat_full ""
-    :battery {EWW_BATTERY.BAT1.capacity})
+    :battery {EWW_BATTERY.BAT0.capacity})
   (network :wifi_text_off "wifi_text_off"
            :wifi_icon_off "wifi_icon_off glyph"
            :connected "Connected to ${ssid}"

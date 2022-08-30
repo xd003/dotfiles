@@ -69,11 +69,12 @@ _comp_options+=(globdots) # lets you tab complete hidden files by default
 # Load plugins
 zinit for \
   light-mode \
-  zsh-users/zsh-completions \
+  romkatv/powerlevel10k \
   Aloxaf/fzf-tab \
+  hlissner/zsh-autopair \
+  zsh-users/zsh-completions \
   zsh-users/zsh-autosuggestions \
   zdharma-continuum/fast-syntax-highlighting \
-  romkatv/powerlevel10k \
   MichaelAquilina/zsh-you-should-use \
   MichaelAquilina/zsh-auto-notify \
   OMZP::git \

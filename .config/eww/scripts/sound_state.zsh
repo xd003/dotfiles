@@ -57,7 +57,7 @@ case "$1" in
         function mic_volume (){
             pamixer --source $mic_source --get-volume
             pactl subscribe |
-            grep --line-buffered "Event 'change' on sink " |
+            grep --line-buffered "Event 'change' on source " |
             while read -r _; do
                 pamixer --source $mic_source --get-volume
             done

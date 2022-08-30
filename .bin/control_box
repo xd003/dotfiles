@@ -4,26 +4,6 @@ case "$1" in
 -bspres)
 	bspc wm -r &
 	;;
--ewwopen)
-	eww daemon
-	eww open taskbar
-	;;
--ewwclose)
-	eww kill
-	bspc config top_padding 0
-	;;
--ewwhalt)
-	eww close-all
-	;;
--ewwreload)
-	if [[ $(pidof eww) ]]; then
-		control_box -ewwhalt
-		control_box -ewwopen
-		dunstify -r 888 "EWW" "Taskbar has been reloaded"
-	else
-		dunstify -u critical -r 888 "EWW" "Taskbar is not running"
-	fi
-	;;
 -polybres)
 	poly-reset
 	;;

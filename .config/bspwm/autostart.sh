@@ -16,7 +16,4 @@ for i in "${restart[@]}"; do
 	eval "$i" &
 done
 
-pgrep -x "eww" | xargs kill;
-control_box -ewwopen
-
 dunstify -i window_list "BSPWM" "Completed autostarting all apps"

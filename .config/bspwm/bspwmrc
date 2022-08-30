@@ -12,7 +12,7 @@
 nitrogen --restore &
 
 # Launch polybar
-# bash "$HOME/.config/bspwm/polybar/launch.sh" &
+bash "$HOME/.config/bspwm/polybar/launch.sh" &
 
 # Fix the pointer for BSPWM
 xsetroot -cursor_name left_ptr &
@@ -48,13 +48,6 @@ fi
 
 # Delete existing hooks and restart them
 for i in "$HOME"/.config/bspwm/hooks/*; do
-	{
-		pkill -9 -f "$i"
-		eval "$i" &
-	}
-done
-
-for i in "$HOME"/.config/bspwm/eww_startup/*; do
 	{
 		pkill -9 -f "$i"
 		eval "$i" &

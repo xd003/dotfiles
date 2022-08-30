@@ -9,7 +9,7 @@
 
 # Restart default apps
 declare -a restart=(xfce4-power-manager picom sxhkd xbanish
-	copyq playerctld flameshot touchegg dunst 1password)
+	copyq playerctld flameshot touchegg dunst)
 for i in "${restart[@]}"; do
 	pgrep -x "$i" | xargs kill
   sleep 0.5

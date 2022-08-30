@@ -2,7 +2,7 @@ set adjust-open width
 
 set selection-clipboard clipboard
 
-set font "Roboto 12"
+set font "Noto Sans 12"
 
 set default-bg "#1a1b26"
 

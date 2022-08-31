@@ -40,9 +40,9 @@ alias riplong="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -3000 | n
 alias rm='rm -i'
 alias sxiv='devour sxiv'
 alias update='paru -Syu'
-alias updatefonts='sudo fc-cache -fv'
+alias updatefonts='sudo fc-cache -fv && fc-cache -fv'
 alias vlc='devour vlc'
-alias wget="wget -c" # continue the download
+alias wget="wget -c --hsts-file $HOME/.cache/.wget-hsts" # continue the download & dont store history in $HOME
 alias zathura='devour zathura'
 
 # required functions

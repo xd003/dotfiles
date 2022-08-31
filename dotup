@@ -23,7 +23,6 @@ mkdir -p $HOME/.bin && ln -sf $HOME/dotfiles/.bin/* $HOME/.bin/
 mkdir -p $HOME/.local/bin && ln -sf $HOME/dotfiles/.local/bin/* $HOME/.local/bin/
 mkdir -p $HOME/Scripts && ln -sf $HOME/dotfiles/Scripts/* $HOME/Scripts/
 mkdir -p $HOME/.local/share/fonts && ln -sf $HOME/dotfiles/.local/share/fonts/* $HOME/.local/share/fonts/
-mkdir -p $HOME/Pictures/Wallpapers && ln -sf $HOME/dotfiles/Pictures/Wallpapers/* $HOME/Pictures/Wallpapers/
 find $HOME/dotfiles -maxdepth 1 -mindepth 1 -type f ! -name '.gitignore' ! -name 'dotup' -exec ln -sf {} $HOME/ \;
 sudo ln -sf $HOME/dotfiles/.config/gtk-2.0 /etc/gtk-2.0 && sudo ln -sf /home/xd003/dotfiles/.config/gtk-3.0 /etc/gtk-3.0
 ln -sf $HOME/dotfiles/dotup $HOME/.bin/dotup

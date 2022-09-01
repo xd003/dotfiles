@@ -82,13 +82,3 @@ declare -a fullscreen=(mpv)
 for i in "${fullscreen[@]}"; do
 	bspc rule -a "$i" manage=on state=fullscreen
 done
-
-#                   __           _          
-#   ___  _  _______/ /_  _______(_)   _____ 
-#  / _ \| |/_/ ___/ / / / / ___/ / | / / _ \
-# /  __/>  </ /__/ / /_/ (__  ) /| |/ /  __/
-# \___/_/|_|\___/_/\__,_/____/_/ |___/\___/ 
-# Exclusive                                      
-
-# Keep plank above all windows
-bspc rule -a Plank manage=off locked=on border=off state=floating focus=off

@@ -27,11 +27,11 @@ ctrl + shift + Escape
 
 # Rofi app launcher
 alt + F1
-  key-menu    
+  applauncher  
 
 # Rofi menu launcher(s)
 super + {x,n,r}
-  {key-power,networkmanager_dmenu,key-rmenu}
+  {powermenu,networkmanager_dmenu,runlauncher}
 
 # Launch Applications
 super + shift + {f,g,c,d,s,v}

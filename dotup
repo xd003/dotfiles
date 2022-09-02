@@ -9,7 +9,7 @@ fi
 
 # Deleting already existing configs & files for cleanup
 (cd $HOME/dotfiles/.config ; find . -maxdepth 1 -mindepth 1 -type d -exec rm -rf $HOME/.config/{} \;)
-(cd $HOME ; rm -rf .p10k.zsh .zshrc zshrc-personal history .zcompdump .lesshst .lyxauth .bashrc .bash_profile .bash_history .bash_logout .wget-hsts .profile .zprofile .Xresources Scripts)
+(cd $HOME ; rm -rf .p10k.zsh .zshrc zshrc-personal history .zcompdump .lesshst .lyxauth .bashrc .bash_profile .bash_history .bash_logout .wget-hsts .profile .zprofile .Xresources)
 (cd $HOME/dotfiles/.bin ; find . -maxdepth 1 -mindepth 1 -exec rm -rf $HOME/.bin/{} \;)
 (cd $HOME/dotfiles/.local/bin ; find . -maxdepth 1 -mindepth 1 -exec rm -rf $HOME/.local/bin/{} \;)
 (cd $HOME/dotfiles/.local/share/fonts ; find . -maxdepth 1 -mindepth 1 -exec rm -rf $HOME/local/share/fonts/{} \;)
@@ -21,7 +21,6 @@ fi
 mkdir -p $HOME/.config && ln -sf $HOME/dotfiles/.config/* $HOME/.config/
 mkdir -p $HOME/.bin && ln -sf $HOME/dotfiles/.bin/* $HOME/.bin/
 mkdir -p $HOME/.local/bin && ln -sf $HOME/dotfiles/.local/bin/* $HOME/.local/bin/
-mkdir -p $HOME/Scripts && ln -sf $HOME/dotfiles/Scripts/* $HOME/Scripts/
 mkdir -p $HOME/.local/share/fonts && ln -sf $HOME/dotfiles/.local/share/fonts/* $HOME/.local/share/fonts/
 find $HOME/dotfiles -maxdepth 1 -mindepth 1 -type f ! -name '.gitignore' ! -name 'dotup' -exec ln -sf {} $HOME/ \;
 sudo ln -sf $HOME/dotfiles/.config/gtk-2.0 /etc/gtk-2.0 && sudo ln -sf /home/xd003/dotfiles/.config/gtk-3.0 /etc/gtk-3.0

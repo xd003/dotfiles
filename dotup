@@ -26,7 +26,7 @@ ln -sf $HOME/dotfiles/dotup $HOME/.bin/dotup
 
 #Giving necessary permission to executables & ignoring chmod changes in repo
 sudo chmod u+x $HOME/.bin/*
-find $HOME/dotfiles/.config -type f -name "*rc" -exec sudo chmod u+x {} \;
+find $HOME/dotfiles/.config -type f -name "*rc" -o -name "*.sh" -exec sudo chmod u+x {} \;
 (cd $HOME/dotfiles ; git config core.filemode false)
 
 echo && echo "Dotfiles successfully restored"

@@ -31,7 +31,7 @@ alt + F1
 
 # Rofi menu launcher(s)
 super + {x,n,r}
-  {key-power,rofi-net,key-rmenu}
+  {key-power,networkmanager_dmenu,key-rmenu}
 
 # Launch Applications
 super + shift + {f,g,c,d,s,v}

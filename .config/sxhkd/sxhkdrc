@@ -37,10 +37,10 @@ super + {x,n,r}
 super + shift + {f,g,c,d,s,v}
   {thunar,geany,code,discord,spotify,virtualbox}
 
-# Launch firefox,audioshare
-super + {w,backslash}
-  {firefox,audioshare}
-
+# Launch firefox
+super + {w}
+  {firefox}
+ 
 # Randomize wallpaper
 super + shift + w
   {nitrogen --set-zoom-fill --save --random Pictures/Wallpapers}

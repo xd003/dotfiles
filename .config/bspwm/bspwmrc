@@ -53,3 +53,5 @@ for i in "$HOME"/.config/bspwm/hooks/*; do
 		eval "$i" &
 	}
 done
+
+bspc config external_rules_command $HOME/.config/bspwm/workspace_rules.sh

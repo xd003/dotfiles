@@ -61,7 +61,7 @@ for i in "${fullscreen[@]}"; do
 done
 
 # Kill if already running
-killall -9 ksuperkey
+killall -9 ksuperkey &
 
 # Enable Super Keys For Menu
 ksuperkey -e 'Super_L=Alt_L|F1' &
@@ -73,7 +73,7 @@ if [[ ! $(pidof xfce-polkit) ]]; then
 fi
 
 # Delete existing hooks and restart them
-pkill -9 -f /home/xd003/.config/bspwm/scripts/switch_emptyws.sh
+pkill -9 -f /home/xd003/.config/bspwm/scripts/switch_emptyws.sh &
 eval /home/xd003/.config/bspwm/scripts/switch_emptyws.sh &
 
 #External Workspace rule

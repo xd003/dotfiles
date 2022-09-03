@@ -3,3 +3,4 @@
 .config/mpv/watch_later
 .config/ranger/colorschemes
 .config/ranger/plugins
+.config/bspwm/polybar/.system

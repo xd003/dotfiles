@@ -71,7 +71,7 @@ if [[ ! $(pidof xfce-polkit) ]]; then
 fi
 
 # Delete existing hooks and restart them
-pkill -9 -f /home/xd003/.config/bspwm/scripts/switch_emptyws.sh &
+pkill -9 -f /home/xd003/.config/bspwm/scripts/switch_emptyws.sh
 eval /home/xd003/.config/bspwm/scripts/switch_emptyws.sh &
 
 #External Workspace rule

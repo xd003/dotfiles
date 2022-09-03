@@ -17,7 +17,7 @@ bash "$HOME/.config/bspwm/polybar/launch.sh" &
 # Fix the pointer for BSPWM
 xsetroot -cursor_name left_ptr &
 
-# Set configurations
+# Set bspc configurations
 bspc config border_width 2
 bspc config window_gap 0
 bspc config split_ratio 0.50
@@ -41,29 +41,21 @@ bspc config pointer_action2 resize_corner
 # Autostart apps
 eval "$HOME/.config/bspwm/autostart.sh" &
 
-# Set rules
+# Set App rules
 # Force floating mode
-declare -a floats=(Alafloat Lxappearance Arandr
-	Viewnior Nm-connection-editor Matplotlib
-	Yad Gnome-disks SimpleScreenRecorder PureRef
-	Font-manager Gnome-system-monitor Gcolor3 flameshot Blueberry.py
-	Pavucontrol jamesdsp Nvidia-settings Nitrogen Peazip
-	Xfce4-appearance-settings Xfce4-mouse-settings
-	parsecd Galculator com.github.joseexposito.touche
-	XVkbd usbguard-applet-qt instagram-live-streamer
-	Mumble qimgv Peek)
+declare -a floats=()
 for i in "${floats[@]}"; do
 	bspc rule -a "$i" manage=on state=floating follow=on focus=on center=true
 done
 
 # Force tile windows
-declare -a tiled=(Zathura)
+declare -a tiled=()
 for i in "${tiled[@]}"; do
 	bspc rule -a "$i" manage=on state=tiled
 done
 
 # Force full screen windows
-declare -a fullscreen=(mpv)
+declare -a fullscreen=()
 for i in "${fullscreen[@]}"; do
 	bspc rule -a "$i" manage=on state=fullscreen
 done

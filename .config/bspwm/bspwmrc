@@ -61,7 +61,7 @@ for i in "${fullscreen[@]}"; do
 done
 
 # Kill if already running & Enable Super Keys For Menu
-killall -9 ksuperkey &
+killall -9 ksuperkey
 ksuperkey -e 'Super_L=Alt_L|F1' &
 ksuperkey -e 'Super_R=Alt_L|F1' &
 

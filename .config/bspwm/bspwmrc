@@ -18,16 +18,6 @@ bash "$HOME/.config/bspwm/polybar/launch.sh" &
 xsetroot -cursor_name left_ptr &
 
 # Set configurations
-for i in "$HOME"/.config/bspwm/configs/*.sh; do
-	{
-		eval "$i" &
-	}
-done
-
-# Autostart apps
-eval "$HOME/.config/bspwm/autostart.sh" &
-
-# Set rules
 bspc config border_width 2
 bspc config window_gap 0
 bspc config split_ratio 0.50
@@ -47,6 +37,36 @@ bspc config focus_follows_pointer true
 bspc config pointer_modifier mod4
 bspc config pointer_action1 move
 bspc config pointer_action2 resize_corner
+
+# Autostart apps
+eval "$HOME/.config/bspwm/autostart.sh" &
+
+# Set rules
+# Force floating mode
+declare -a floats=(Alafloat Lxappearance Arandr
+	Viewnior Nm-connection-editor Matplotlib
+	Yad Gnome-disks SimpleScreenRecorder PureRef
+	Font-manager Gnome-system-monitor Gcolor3 flameshot Blueberry.py
+	Pavucontrol jamesdsp Nvidia-settings Nitrogen Peazip
+	Xfce4-appearance-settings Xfce4-mouse-settings
+	parsecd Galculator com.github.joseexposito.touche
+	XVkbd usbguard-applet-qt instagram-live-streamer
+	Mumble qimgv Peek)
+for i in "${floats[@]}"; do
+	bspc rule -a "$i" manage=on state=floating follow=on focus=on center=true
+done
+
+# Force tile windows
+declare -a tiled=(Zathura)
+for i in "${tiled[@]}"; do
+	bspc rule -a "$i" manage=on state=tiled
+done
+
+# Force full screen windows
+declare -a fullscreen=(mpv)
+for i in "${fullscreen[@]}"; do
+	bspc rule -a "$i" manage=on state=fullscreen
+done
 
 # Kill if already running
 killall -9 ksuperkey

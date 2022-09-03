@@ -60,9 +60,8 @@ for i in "${fullscreen[@]}"; do
 	bspc rule -a "$i" manage=on state=fullscreen
 done
 
-# Kill if already running
+# Kill if already running & Enable Super Keys For Menu
 killall -9 ksuperkey &
-# Enable Super Keys For Menu
 ksuperkey -e 'Super_L=Alt_L|F1' &
 ksuperkey -e 'Super_R=Alt_L|F1' &
 

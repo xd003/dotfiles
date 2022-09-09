@@ -134,7 +134,3 @@ super + {_,shift + }{KP_End,KP_Down,KP_Next,KP_Left,KP_Begin,KP_Right,KP_Home}
 # resize windows i3 style
 super + ctrl + {Left,Up,Down,Right}
 	resize {x -, y +, y -, x +}
-
-# Move a floating window
-super + ctrl {KP_End,KP_Down,KP_Begin,KP_Next}
-	bspc node -v {-200 0,0 200,0 -200,200 0}

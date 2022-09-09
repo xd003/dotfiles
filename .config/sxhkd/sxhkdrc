@@ -93,10 +93,6 @@ alt + Down
 super + f
     bspc node -t "~"fullscreen
 
-# Change focus to next window, including floating window
-alt + {_,shift + }Tab
-  bspc node -f {next.local,prev.local}
-
 # Center currently active window
 super + KP_Insert
   center-window

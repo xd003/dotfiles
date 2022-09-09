@@ -74,7 +74,7 @@ ctrl + shift + Print
 #
 
 # Switch between external rule & default tiling
-super + alt
+super + s
   layout_switch
 
 # Quit/Restart bspwm
@@ -85,18 +85,10 @@ super + shift + {q,r}
 alt + Down
   bspc node -c
 
-#
-# state/flags
-#
-
 # Set full screen
 super + f
     bspc node -t "~"fullscreen
  
-#
-# focus/swap
-#
-
 # Node focus and swapping on the same desktop
 super + {_,shift + }{Left,Down,Up,Right}
   bspc node -{f,s} {west,south,north,east}
@@ -122,15 +114,7 @@ super + {o,i}
 	bspc wm -h off; \
 	bspc node {older,newer} -f; \
 	bspc wm -h on
-
-# Focus or send to the given desktop
-super + {_,shift + }{KP_End,KP_Down,KP_Next,KP_Left,KP_Begin,KP_Right,KP_Home}
-	bspc {desktop -f,node -d} '^{1-7}'
-
-#
-# move/resize
-#
-
+	
 # resize windows i3 style
 super + ctrl + {Left,Up,Down,Right}
 	resize {x -, y +, y -, x +}

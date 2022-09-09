@@ -96,11 +96,7 @@ super + {_,shift + }{Left,Down,Up,Right}
 # Focus the next/previous window in the current desktop
 alt + space
  bspc node -f {next,prev}.local.!hidden.window
-        
-# Rotate windows
-super + {r,KP_Divide}        
-  bspc node @/ -R {90,90}
-
+ 
 # Focus the next/previous active desktop in the current monitor
 alt + {Left,Right}
  bspc desktop -f {prev,next}.occupied.local
@@ -108,6 +104,10 @@ alt + {Left,Right}
 # Focus the last node/desktop
 super + {grave,Tab}
 	bspc {node,desktop} -f last
+        
+# Rotate windows
+super + {r,KP_Divide}        
+  bspc node @/ -R {90,90}
 	
 # resize windows i3 style
 super + ctrl + {Left,Up,Down,Right}

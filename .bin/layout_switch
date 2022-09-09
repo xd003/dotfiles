@@ -1,0 +1,9 @@
+#!/bin/bash
+
+ERULE="$(bspc config external_rules_command)"
+
+if [ "$ERULE" == "$HOME/.config/bspwm/scripts/external_rules.sh" ]; then
+  bspc config external_rules_command ''
+else 
+  bspc config external_rules_command $HOME/.config/bspwm/scripts/external_rules.sh
+fi

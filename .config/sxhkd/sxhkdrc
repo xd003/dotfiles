@@ -85,33 +85,13 @@ super + shift + {q,r}
 alt + Down
   bspc node -c
 
-# Send the newest marked node to the newest preselected node
-super + y
-  bspc node newest.marked.local -n newest.!automatic.local
-
-# Swap the current node and the biggest window
-super + g
-	bspc node -s biggest.window
-
 #
 # state/flags
 #
 
-# Set pseudo tiled
-super + ctrl + {KP_Delete}
-	bspc node -t {pseudo_tiled}
-
 # Set full screen
 super + f
     bspc node -t "~"fullscreen
-
-# Set the node flags
-super + ctrl + {m,x,z}
-	bspc node -g {marked,locked,private}
-
-# Make window sticky
-super + {KP_Add}
-  bspc node -g {sticky}
 
 # Change focus to next window, including floating window
 alt + {_,shift + }Tab

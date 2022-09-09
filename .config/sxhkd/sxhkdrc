@@ -73,6 +73,10 @@ ctrl + shift + Print
 # BSPWM HOTKEYS
 #
 
+# Switch between external rule & default tiling
+space + Alt_R
+  layout_switch
+
 # Quit/Restart bspwm
 super + shift + {q,r}
   bspc {quit,wm -r}

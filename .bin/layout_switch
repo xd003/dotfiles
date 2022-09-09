@@ -4,6 +4,8 @@ ERULE="$(bspc config external_rules_command)"
 
 if [ "$ERULE" == "$HOME/.config/bspwm/scripts/external_rules.sh" ]; then
   bspc config external_rules_command ''
+  dunstify -i window_list "Layout" "Switched to default tiling"
 else 
   bspc config external_rules_command $HOME/.config/bspwm/scripts/external_rules.sh
+  dunstify -i window_list "Layout" "Switched to fullscreen mode"
 fi

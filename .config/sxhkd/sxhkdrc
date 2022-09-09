@@ -108,12 +108,6 @@ alt + {Left,Right}
 # Focus the last node/desktop
 super + {grave,Tab}
 	bspc {node,desktop} -f last
-
-# Focus the older or newer node in the focus history
-super + {o,i}
-	bspc wm -h off; \
-	bspc node {older,newer} -f; \
-	bspc wm -h on
 	
 # resize windows i3 style
 super + ctrl + {Left,Up,Down,Right}

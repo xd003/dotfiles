@@ -88,6 +88,14 @@ alt + Down
 # Set full screen
 super + f
     bspc node -t "~"fullscreen
+    
+# Focus the next/previous active desktop in the current monitor
+alt + {Left,Right}
+ bspc desktop -f {prev,next}.occupied.local
+ 
+# Focus the last node/desktop
+super + {grave,Tab}
+	bspc {node,desktop} -f last
  
 # Node focus and swapping on the same desktop
 super + {_,shift + }{Left,Down,Up,Right}
@@ -97,14 +105,6 @@ super + {_,shift + }{Left,Down,Up,Right}
 alt + space
  bspc node -f {next,prev}.local.!hidden.window
  
-# Focus the next/previous active desktop in the current monitor
-alt + {Left,Right}
- bspc desktop -f {prev,next}.occupied.local
-
-# Focus the last node/desktop
-super + {grave,Tab}
-	bspc {node,desktop} -f last
-        
 # Rotate windows
 super + {r,KP_Divide}        
   bspc node @/ -R {90,90}

@@ -75,4 +75,4 @@ pkill -9 -f /home/xd003/.config/bspwm/scripts/switch_emptyws.sh
 eval /home/xd003/.config/bspwm/scripts/switch_emptyws.sh &
 
 #External Workspace rule
-bspc config external_rules_command $HOME/.config/bspwm/scripts/workspace_rules.sh
+bspc config external_rules_command $HOME/.config/bspwm/scripts/external_rules.sh

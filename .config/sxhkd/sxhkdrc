@@ -102,7 +102,7 @@ super + {_,shift + }{Left,Down,Up,Right}
   bspc node -{f,s} {west,south,north,east}
 
 # Focus the next/previous window in the current desktop
-ctrl + 
+ctrl + {Left,Right}
  bspc node -f {next,prev}.local.!hidden.window
    
    

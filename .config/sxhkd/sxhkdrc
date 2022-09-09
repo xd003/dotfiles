@@ -74,7 +74,7 @@ ctrl + shift + Print
 #
 
 # Switch between external rule & default tiling
-space + Alt_R
+space + alt
   layout_switch
 
 # Quit/Restart bspwm
@@ -84,14 +84,6 @@ super + shift + {q,r}
 # Close Focused Window
 alt + Down
   bspc node -c
-
-# Alternate between the tiled and monocle layout
-super + space
-  bspc node -t "~"{floating,tiled}
-
-# Switch to floating, tiled
-super + {KP_Subtract,KP_Delete}
-  bspc node -t {floating,tiled}
 
 # Send the newest marked node to the newest preselected node
 super + y

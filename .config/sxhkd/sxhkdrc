@@ -92,10 +92,6 @@ alt + Down
 # Set full screen
 super + f
     bspc node -t "~"fullscreen
-
-# Center currently active window
-super + KP_Insert
-  center-window
  
 #
 # focus/swap

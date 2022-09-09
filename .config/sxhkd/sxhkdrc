@@ -160,26 +160,6 @@ super + {_,shift + }{KP_End,KP_Down,KP_Next,KP_Left,KP_Begin,KP_Right,KP_Home}
 	bspc {desktop -f,node -d} '^{1-7}'
 
 #
-# preselect
-#
-
-# Preselect the direction
-super + shift + {KP_End,KP_Down,KP_Begin,KP_Next}
-	bspc node -p {west,south,north,east}
-
-# Preselect the ratio
-super + shift + {1-9}
-	bspc node -o 0.{1-9}
-
-# Cancel the preselection for the focused node
-super + alt + {KP_Delete}
-	bspc node -p cancel
-
-# Cancel the preselection for the focused desktop
-super + ctrl + shift + space
-	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
-
-#
 # move/resize
 #
 

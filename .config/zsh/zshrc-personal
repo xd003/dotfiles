@@ -25,7 +25,7 @@ alias m='mocp'
 alias matrix='unimatrix -f -l ocCgGkS -s 96'
 alias mem="ps axch -o cmd:15,%mem --sort=-%mem | head"
 alias merge="xrdb -merge ~/.Xresources"
-alias mirrorup="sudo reflector --verbose --country India --completion-percent 100 --protocol https --latest 5 --sort rate --save /etc/pacman.d/mirrorlist" # update your mirrors
+alias mirrorup="sudo reflector --verbose --country India --protocol https --latest 5 --sort rate --save /etc/pacman.d/mirrorlist" # update your mirrors
 alias fixkey="sudo rm /var/lib/pacman/sync/* && sudo rm -r /etc/pacman.d/gnupg/* && sudo pacman-key --init && sudo pacman-key --populate && sudo pacman -Sy --noconfirm archlinux-keyring"
 alias mpv='devour mpv' #Use devour for apps which could be occasionally opened through terminal 
 alias mv='mv -i'

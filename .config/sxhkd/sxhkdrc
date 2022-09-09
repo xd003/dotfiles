@@ -74,7 +74,7 @@ ctrl + shift + Print
 #
 
 # Switch between external rule & default tiling
-space + alt
+super + alt
   layout_switch
 
 # Quit/Restart bspwm
@@ -164,11 +164,11 @@ super + {_,shift + }{KP_End,KP_Down,KP_Next,KP_Left,KP_Begin,KP_Right,KP_Home}
 #
 
 # Preselect the direction
-super + alt + {KP_End,KP_Down,KP_Begin,KP_Next}
+super + shift + {KP_End,KP_Down,KP_Begin,KP_Next}
 	bspc node -p {west,south,north,east}
 
 # Preselect the ratio
-super + ctrl + {1-9}
+super + shift + {1-9}
 	bspc node -o 0.{1-9}
 
 # Cancel the preselection for the focused node

@@ -104,8 +104,7 @@ super + {_,shift + }{Left,Down,Up,Right}
 # Focus the next/previous window in the current desktop
 ctrl + {Left,Right}
  bspc node -f {next,prev}.local.!hidden.window
-   
-   
+    
 # resize windows i3 style
 super + ctrl + {Left,Up,Down,Right}
 	resize {x -, y +, y -, x +}

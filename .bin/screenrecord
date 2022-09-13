@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-mypidfile=/var/run/screenrecord.pid
+mypidfile=$HOME/Videos/screenrecord.pid
 
 # Add check for existence of mypidfile 
 if [ -f $mypidfile ]; then

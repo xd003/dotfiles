@@ -1,18 +1,11 @@
 #!/usr/bin/env bash
 
-pid=$HOME/Videos/screenrecord.pid
-
-# Add check for existence of mypidfile 
-if [ -f $pid ]; then
+# Check if script is already running
+check=$(pgrep -fl screenrecord)
+if [ -z "$check" ]; then
     dunstify "Screen Recording has been stopped"
     exit
 fi
-
-# Ensure PID file is removed on program exit.
-trap "rm -f -- '$mypidfile'" EXIT
-
-# Create a file with current PID to indicate that process is running.
-echo $$ > "$pid"
 
 dunstify "Screen Recording has been started"
 RES=$(xrandr -q | sed '3q;d' | perl -pe 's|^\s{3}(\w+)\s+(\d+).*|$1|g')

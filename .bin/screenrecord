@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
 
+RES=$(xrandr -q | sed '3q;d' | perl -pe 's|^\s{3}(\w+)\s+(\d+).*|$1|g')
+RATE=$(xrandr -q | sed '3q;d' | perl -pe 's|^\s{3}(\w+)\s+(\d+).*|$2|g')
+
 ffmpeg -f x11grab \
--framerate 60 \
--video_size 1920x1080 \
+-framerate $RATE \
+-video_size $RES \
 -i $DISPLAY \
 -preset ultrafast \
 $HOME/Videos/"$(date +%Y%m%d_%H%M%S)".mp4

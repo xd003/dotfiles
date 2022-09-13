@@ -1,5 +1,21 @@
 #!/usr/bin/env bash
 
+mypidfile=/var/run/screenrecord.pid
+
+# Add check for existence of mypidfile 
+if [ -f $mypidfile ]; then
+    pkill -9 -f $HOME/.bin/screenrecord
+    dunstify -i window_list "Layout" "Screen Recording has been stopped"
+    exit
+fi
+
+
+# Ensure PID file is removed on program exit.
+trap "rm -f -- '$mypidfile'" EXIT
+
+# Create a file with current PID to indicate that process is running.
+echo $$ > "$mypidfile"
+
 RES=$(xrandr -q | sed '3q;d' | perl -pe 's|^\s{3}(\w+)\s+(\d+).*|$1|g')
 RATE=$(xrandr -q | sed '3q;d' | perl -pe 's|^\s{3}(\w+)\s+(\d+).*|$2|g')
 

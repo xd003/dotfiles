@@ -4,7 +4,7 @@
 check=$(pgrep -fl screenrecord)
 if [ -z "$check" ]; then
     dunstify "Screen Recording has been stopped"
-    exit
+    pkill -9 -f $HOME/.bin/screenrecord
 fi
 
 dunstify "Screen Recording has been started"

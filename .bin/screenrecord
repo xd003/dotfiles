@@ -10,4 +10,5 @@ ffmpeg -f x11grab \
 -preset ultrafast \
 -vaapi_device /dev/dri/renderD128 \
 -c:v h264_vaapi \
+-vf 'hwupload,scale_vaapi=format=nv12' \
 $HOME/Videos/"$(date +%Y%m%d_%H%M%S)".mp4

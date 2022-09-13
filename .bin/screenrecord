@@ -9,6 +9,9 @@ if [ -f $pid ]; then
     exit
 fi
 
+# Ensure PID file is removed on program exit.
+trap "rm -f -- '$mypidfile'" EXIT
+
 # Create a file with current PID to indicate that process is running.
 echo $$ > "$pid"
 
@@ -24,6 +27,4 @@ ffmpeg -f x11grab \
 -vaapi_device /dev/dri/renderD128 \
 -c:v h264_vaapi \
 -vf 'hwupload,scale_vaapi=format=nv12' \
-$HOME/Videos/"$(date +%Y%m%d_%H%M%S)".mp4
-
-rm -rf $pid
+$HOME/Videos/"$(date +%Y%m%d_%H:%M)".mp4

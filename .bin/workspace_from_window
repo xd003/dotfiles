@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+# Get the focused windows ID
+WINDOW=`bspc query -N focused -n`
+
+# Get the class name of the window
+CLASSNAME=`xprop -id "$WINDOW" WM_CLASS | sed 's/.*=//g' | sed 's/,.*//g' | xargs 2>/dev/null`
+
+# Create the new workspace
+bspc monitor -a $CLASSNAME
+
+# Move the window to the corresponding class name
+bspc node -d $CLASSNAME
+
+# Follow that workspace
+bspc desktop -f $CLASSNAME

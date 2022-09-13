@@ -103,12 +103,16 @@ super + {_,shift + }{Left,Down,Up,Right}
 
 # Focus the next/previous window in the current desktop
 ctrl + {Left,Right}
- bspc node -f {next,prev}.local.!hidden.window
+  bspc node -f {next,prev}.local.!hidden.window
     
 # move focused window to the next workspace and then switch to that workspace
 alt + shift + {Left,Right}
-    id=$(bspc query --nodes --node); bspc node --to-desktop {prev,next}; bspc desktop --focus next; bspc node --focus ${id}
+  id=$(bspc query --nodes --node); bspc node --to-desktop {prev,next}; bspc desktop --focus next; bspc node --focus ${id}
 
 # resize windows i3 style
 super + ctrl + {Left,Up,Down,Right}
 	resize {x -, y +, y -, x +}
+
+# Move focused window to new workspace
+shift + return
+  workspace_from_window

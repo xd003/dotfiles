@@ -4,7 +4,6 @@ pid=$HOME/Videos/screenrecord.pid
 
 # Add check for existence of mypidfile 
 if [ -f $pid ]; then
-    pkill -9 -f $HOME/.bin/screenrecord
     dunstify "Screen Recording has been stopped"
     exit
 fi

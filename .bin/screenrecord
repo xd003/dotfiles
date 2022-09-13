@@ -8,6 +8,6 @@ ffmpeg -f x11grab \
 -video_size $RES \
 -i $DISPLAY \
 -preset ultrafast \
--vaapi_device /dev/dri/renderD128
+-vaapi_device /dev/dri/renderD128 \
 -c:v h264_vaapi \
 $HOME/Videos/"$(date +%Y%m%d_%H%M%S)".mp4

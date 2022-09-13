@@ -58,7 +58,7 @@ Print
   flameshot full -c -p /home/xd003/Pictures/Screenshots
 
 # FFMPEG Screen Record
-mod + s
+super + s
   screenrecord
 
 #

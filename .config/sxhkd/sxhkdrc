@@ -114,5 +114,5 @@ super + ctrl + {Left,Up,Down,Right}
 	resize {x -, y +, y -, x +}
 
 # Move focused window to new workspace
-shift + return
+ctrl + Return
   workspace_from_window

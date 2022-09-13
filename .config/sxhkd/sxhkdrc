@@ -57,6 +57,10 @@ XF86MonBrightness{Up,Down}
 Print
   flameshot full -c -p /home/xd003/Pictures/Screenshots
 
+# FFMPEG Screen Record
+mod + s
+  screenrecord
+
 #
 # Screenshot exras
 #

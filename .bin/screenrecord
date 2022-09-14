@@ -18,5 +18,5 @@ else
   -vaapi_device /dev/dri/renderD128 \
   -c:v h264_vaapi \
   -vf 'hwupload,scale_vaapi=format=nv12' \
-  $HOME/Videos/"$(date +%d%_m_%H:%M)".mp4
+  $HOME/Videos/"$(date +%d%_m%_%H:%M)".mp4
 fi

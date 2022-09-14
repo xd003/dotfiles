@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Check if script is already running
-check="$(pgrep -fl screenrecord)"
+check="$(pgrep -fl ffmpeg)"
 if [ -n "$check" ]; then
     dunstify "Screen Recording has been stopped"
     killall --user $USER  --ignore-case  --signal INT ffmpeg

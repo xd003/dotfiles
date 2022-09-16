@@ -6,7 +6,7 @@ WINDOW=`bspc query -N focused -n`
 # Get the class name of the window
 CLASSNAME=`xprop -id "$WINDOW" WM_CLASS | sed 's/.*=//g' | sed 's/,.*//g' | xargs 2>/dev/null`
 
-# Check if the Workspace with above name already exists & append value as required
+# Check if the Workspace with above classname already exists & append value as required
 append="$(bspc query -D --names | grep -c $CLASSNAME)"
 if [ $append -gt 0 ]; then
   append=$(($append + 1)) && CLASSNAME="$CLASSNAME$append"

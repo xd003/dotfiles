@@ -7,8 +7,7 @@ WINDOW=`bspc query -N focused -n`
 CLASSNAME=`xprop -id "$WINDOW" WM_CLASS | sed 's/.*=//g' | sed 's/,.*//g' | xargs 2>/dev/null`
 
 # Check if the Workspace with above name already exists
-check="$(bspc query -D --names | grep $CLASSNAME)"
-
+check="$(bspc query -D --names | grep -c $CLASSNAME)"
 
 # Create the new workspace
 bspc monitor -a $CLASSNAME

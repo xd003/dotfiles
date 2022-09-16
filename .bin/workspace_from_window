@@ -9,7 +9,7 @@ CLASSNAME=`xprop -id "$WINDOW" WM_CLASS | sed 's/.*=//g' | sed 's/,.*//g' | xarg
 # Check if the Workspace with above name already exists
 check="$(bspc query -D --names | grep -c $CLASSNAME)"
 if [ $check -gt 0 ]; then
-  check=$(($check + 1)) && CLASSNAME=CLASSNAME$check
+  check=$(($check + 1)) && CLASSNAME="$CLASSNAME$check"
 fi
 
 # Create the new workspace

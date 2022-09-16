@@ -7,7 +7,7 @@ WINDOW=`bspc query -N focused -n`
 CLASSNAME=`xprop -id "$WINDOW" WM_CLASS | sed 's/.*=//g' | sed 's/,.*//g' | xargs 2>/dev/null`
 
 # Create the new workspace
-bspc monitor -a $CLASSNAME$((RANDOM))
+bspc monitor -a $CLASSNAME
 
 # Move the window to the corresponding class name
 bspc node -d $CLASSNAME

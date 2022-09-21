@@ -4,3 +4,4 @@
 .config/ranger/colorschemes
 .config/ranger/plugins
 .config/bspwm/polybar/.system
+.config/touchegg/.touchegg:0.lock

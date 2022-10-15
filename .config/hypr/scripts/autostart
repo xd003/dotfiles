@@ -1,10 +1,10 @@
 dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 
 # Kill already running process
-_ps=(waybar xfce-polkit xfce4-power-manager wl-clipboard flameshot dunst ksuperkey)
-for _prs in "${_ps[@]}"; do
-	if [[ `pidof ${_prs}` ]]; then
-		killall -9 ${_prs}
+ps=(waybar xfce-polkit xfce4-power-manager flameshot dunst ksuperkey)
+for i in "${ps[@]}"; do
+	if [[ `pidof ${i}` ]]; then
+		killall -9 ${i}
 	fi
 done
 
@@ -14,4 +14,15 @@ done
 # Enable SUPER Key for Rofi launcher
 ksuperkey -e 'Super_L=Alt_L|F1' &
 ksuperkey -e 'Super_R=Alt_L|F1' &
+
+# Set wallpaper
+swaybg --output '*' --mode fill --image ~/.config/hypr/wallpapers/wallpaper.jpg &
+
+ps=(waybar xfce4-power-manager wl-clipboard flameshot dunst ksuperkey 'foot-s' 'thunar --daemon' 'wl-paste -t text --watch clipman store')
+for i in "${ps[@]}"; do
+  eval "$i" &
+done
+
+
+dunstify "Completed autostarting all apps"
 

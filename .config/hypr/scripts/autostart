@@ -19,9 +19,12 @@ ksuperkey -e 'Super_R=Alt_L|F1' &
 # Set wallpaper
 swaybg --output '*' --mode fill --image ~/.config/hypr/wallpapers/wallpaper.jpg &
 
-ps=(waybar xfce4-power-manager wl-clipboard dunst ksuperkey 'foot-s' 'thunar --daemon' 'wl-paste -t text --watch clipman store')
-for i in "${ps[@]}"; do
-  eval "$i" &
-done
+waybar &
+xfce4-power-manager &
+dunst &
+ksuperkey &
+foot -s &
+thunar --daemon &
+wl-paste -t text --watch clipman store &
 
 dunstify "Completed autostarting all apps"

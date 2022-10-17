@@ -1,5 +1,5 @@
 # Kill already running process
-ps=(waybar xfce-polkit xfce4-power-manager dunst)
+ps=(waybar xfce-polkit xfce4-power-manager dunst copyq)
 for i in "${ps[@]}"; do
 	if [[ `pidof ${i}` ]]; then
 		killall -9 ${i}
@@ -17,7 +17,7 @@ xfce4-power-manager &
 dunst &
 foot -s &
 thunar --daemon &
-wl-paste -t text --watch clipman store &
+copyq &
 
 dunstify "Completed autostarting all apps"
 

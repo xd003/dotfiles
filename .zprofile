@@ -51,5 +51,5 @@ export MYPY_CACHE_DIR="$XDG_CACHE_HOME"/mypy
 export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
 
 # Set default mime types
-export TERMINAL="alacritty"
+export TERMINAL="footclient"
 export BROWSER="firefox"

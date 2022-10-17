@@ -1,5 +1,5 @@
 # Kill already running process
-ps=(waybar xfce-polkit xfce4-power-manager dunst copyq eww)
+ps=(waybar xfce-polkit dunst copyq eww)
 for i in "${ps[@]}"; do
 	if [[ `pidof ${i}` ]]; then
 		killall -9 ${i}
@@ -13,7 +13,6 @@ done
 swaybg --output '*' --mode fill --image ~/.config/hypr/wallpapers/wallpaper.jpg &
 
 eww daemon && eww open bar &
-xfce4-power-manager &
 dunst &
 foot -s &
 thunar --daemon &

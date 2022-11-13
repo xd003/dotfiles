@@ -1,5 +1,5 @@
 # Kill already running process
-ps=(waybar xfce-polkit dunst copyq eww)
+ps=(xfce-polkit dunst copyq eww)
 for i in "${ps[@]}"; do
 	if [[ `pidof ${i}` ]]; then
 		killall -9 ${i}

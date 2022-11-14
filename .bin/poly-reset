@@ -1,3 +1,0 @@
-#!/bin/bash
-
-eval ~/.config/bspwm/polybar/launch.sh && dunstify --replace=69 -i xfce4-systray "Restarted Polybar"

@@ -52,6 +52,7 @@ export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 export SCREENRC="$XDG_CONFIG_HOME"/screen/screenrc
 export MYPY_CACHE_DIR="$XDG_CACHE_HOME"/mypy
 export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
+export LD_PRELOAD=/home/xd003/.bin/spotifywm.so /usr/share/spotify/spotify
 
 # Set default mime types
 export TERMINAL="footclient"

@@ -4,19 +4,8 @@
 check="$(pgrep -fl ffmpeg)"
 if [ -n "$check" ]; then
   notify-send -t 1000 "Screen Recording has been stopped"
-  killall --user $USER  --ignore-case  --signal INT ffmpeg
+  killall --user $USER  --ignore-case  --signal INT wf-recorder
 else
   notify-send -t 1000 "Screen Recording has been started"
-  RES=$(xrandr -q | sed '3q;d' | perl -pe 's|^\s{3}(\w+)\s+(\d+).*|$1|g')
-  RATE=$(xrandr -q | sed '3q;d' | perl -pe 's|^\s{3}(\w+)\s+(\d+).*|$2|g')
-
-  ffmpeg -f x11grab \
-  -framerate $RATE \
-  -video_size $RES \
-  -i $DISPLAY \
-  -preset ultrafast \
-  -vaapi_device /dev/dri/renderD128 \
-  -c:v h264_vaapi \
-  -vf 'hwupload,scale_vaapi=format=nv12' \
-  $HOME/Videos/"$(date +%d_%m_%H:%M)".mp4
+  wf-recorder -f $HOME/Videos/"$(date +%d_%m_%H:%M)".mp4 -c h264_vaapi -d /dev/dri/renderD128
 fi

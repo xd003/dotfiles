@@ -27,9 +27,7 @@ alias mem="ps axch -o cmd:15,%mem --sort=-%mem | head"
 alias merge="xrdb -merge ~/.Xresources"
 alias mirrorup="sudo reflector --verbose --country India --protocol https --latest 5 --sort rate --save /etc/pacman.d/mirrorlist" # update your mirrors
 alias fixkey="sudo rm /var/lib/pacman/sync/* && sudo rm -r /etc/pacman.d/gnupg/* && sudo pacman-key --init && sudo pacman-key --populate && sudo pacman -Sy --noconfirm archlinux-keyring"
-alias mpv='devour mpv' #Use devour for apps which could be occasionally opened through terminal 
 alias mv='mv -i'
-alias t='devour thunar .'
 alias pdw="pwd"
 alias pipes='pipes -R -t 1'
 alias q='exit'
@@ -37,12 +35,9 @@ alias rg="rg --sort path --no-ignore --hidden" #search content with ripgrep
 alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl" #Recent Installed Packages
 alias riplong="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -3000 | nl"
 alias rm='rm -i'
-alias sxiv='devour sxiv'
 alias up='paru -Syu'
 alias fontup='sudo fc-cache -fv && fc-cache -fv'
-alias vlc='devour vlc'
 alias wget="wget -c --hsts-file $HOME/.cache/.wget-hsts" # continue the download & dont store history in $HOME
-alias zathura='devour zathura'
 
 # required functions
 

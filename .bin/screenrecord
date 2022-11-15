@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Check if script is already running
-check="$(pgrep -fl ffmpeg)"
+check="$(pgrep -fl wf-recorder)"
 if [ -n "$check" ]; then
   notify-send -t 1000 "Screen Recording has been stopped"
   killall --user $USER  --ignore-case  --signal INT wf-recorder
